@@ -42,7 +42,13 @@
                 <td>{{$comic->price}}</td>
                 <td>{{$comic->sale_date}}</td>
                 <td><a href="{{route('comics.edit', $comic)}}" class="btn btn-link link-success">Edit</a></td>
-                <td><button type="button" class="btn btn-link link-danger">Delete</button></td>
+                <td>
+                    <form action="{{route('comics.destroy', $comic)}}" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button type="submit" class="btn btn-link link-danger">Delete</button>
+                    </form> 
+                </td>
             </tr>
         @endforeach
       </tbody>

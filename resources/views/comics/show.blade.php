@@ -13,7 +13,11 @@
             <a href="{{route('comics.edit', $comic)}}" class="btn btn-link link-success">Edit</a>
         </div>
         <div class="col-auto">
-            <button type="button" class="btn btn-link link-danger">Delete</button>
+            <form action="{{route('comics.destroy', $comic)}}" method="POST">
+                @method('DELETE')
+                @csrf
+                <button type="button" class="btn btn-link link-danger">Delete</button>
+            </form>
         </div>
     </div>
 </div>
