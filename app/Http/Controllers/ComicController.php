@@ -23,8 +23,13 @@ class ComicController extends Controller
         return view('comics.show', compact('comic'));
     }
 
-    public function store(){
-        dump("store");
+    public function store(Request $request){
+        
+        $form_data = $request->all();
+
+        $new_comic = Comic::create($form_data);
+
+        return to_route('comics.show', $new_comic);
     }
 
 }

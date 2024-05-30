@@ -10,7 +10,7 @@
             <h1>COMICS</h1>
         </div>
         <div class="col-auto">
-            <a class="btn btn-primary">Add Comic</a>
+            <a href="{{route('comics.create')}}" class="btn btn-primary">Add Comic</a>
         </div>
     </div>
 </div>

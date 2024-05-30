@@ -11,7 +11,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container py-3">
     <form action="{{route('comics.store')}}" method="POST">
 
         @csrf
@@ -25,6 +25,10 @@
             <textarea class="form-control" id="description" name="description" rows="3"></textarea>
         </div>
         <div class="mb-3">
+            <label for="image" class="form-label">Image URL</label>
+            <input type="text" class="form-control" id="image" name="thumb" placeholder="http://...">
+        </div>
+        <div class="mb-3">
             <label for="series" class="form-label">Series</label>
             <input type="text" class="form-control" id="series" name="series" placeholder="Serie">
         </div>
@@ -36,6 +40,12 @@
             <label for="sale_date" class="form-label">Sale date</label>
             <input type="date" class="form-control" id="sale_date" name="sale_date">
         </div>
+        <div class="mb-3">
+            <label for="sale_date" class="form-label">Type</label>
+            <input type="text" class="form-control" id="type" name="type" placeholder="Comic book">
+        </div>
+
+        <button class="btn btn-primary">Crea</button>
     </form>
 </div>
 @endsection
