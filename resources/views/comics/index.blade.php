@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container py-3">
     <div class="row align-items-center">
         <div class="col-auto">
             <h1>COMICS</h1>
@@ -46,7 +46,7 @@
                     <form action="{{route('comics.destroy', $comic)}}" method="POST">
                         @method('DELETE')
                         @csrf
-                        <button type="submit" class="btn btn-link link-danger">Delete</button>
+                        <button type="submit" class="btn btn-link link-danger" onclick="return confirm('Are you sure you want to delete this comic?')">Delete</button>
                     </form> 
                 </td>
             </tr>

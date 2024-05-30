@@ -4,19 +4,19 @@
 
 @section('content')
 
-<div class="container">
+<div class="container py-3">
     <div class="row align-items-center">
         <div class="col-auto">
             <h1>COMIC DETAILS</h1>
         </div>
         <div class="col-auto">
-            <a href="{{route('comics.edit', $comic)}}" class="btn btn-link link-success">Edit</a>
+            <a href="{{route('comics.edit', $comic)}}" class="btn btn-success">Edit</a>
         </div>
         <div class="col-auto">
             <form action="{{route('comics.destroy', $comic)}}" method="POST">
                 @method('DELETE')
                 @csrf
-                <button type="button" class="btn btn-link link-danger">Delete</button>
+                <button type="button" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this comic?')">Delete</button>
             </form>
         </div>
     </div>
