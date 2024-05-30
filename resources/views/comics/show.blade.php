@@ -10,7 +10,7 @@
             <h1>COMIC DETAILS</h1>
         </div>
         <div class="col-auto">
-            <button type="button" class="btn btn-link link-success">Edit</button>
+            <a href="{{route('comics.edit', $comic)}}" class="btn btn-link link-success">Edit</a>
         </div>
         <div class="col-auto">
             <button type="button" class="btn btn-link link-danger">Delete</button>
