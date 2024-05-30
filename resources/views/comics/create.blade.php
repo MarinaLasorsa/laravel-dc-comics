@@ -13,17 +13,28 @@
 </div>
 <div class="container">
     <form action="{{route('comics.store')}}" method="POST">
+
+        @csrf
+
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input type="text" class="form-control" id="title" placeholder="titolo">
+            <input type="text" class="form-control" id="title" name="title" placeholder="Title">
         </div>
         <div class="mb-3">
-            <label for="description" class="form-label">Title</label>
-            <textarea class="form-control" id="description" rows="3"></textarea>
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
         </div>
         <div class="mb-3">
             <label for="series" class="form-label">Series</label>
-            <input type="text" class="form-control" id="series" placeholder="serie">
+            <input type="text" class="form-control" id="series" name="series" placeholder="Serie">
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="text" class="form-control" id="price" name="price" placeholder="Price">
+        </div>
+        <div class="mb-3">
+            <label for="sale_date" class="form-label">Sale date</label>
+            <input type="date" class="form-control" id="sale_date" name="sale_date">
         </div>
     </form>
 </div>
